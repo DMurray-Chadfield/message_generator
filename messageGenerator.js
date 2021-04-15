@@ -28,3 +28,10 @@ function randomComponent(array) {
     let index = Math.floor(Math.random()*len);
     return array[index];
 }
+
+function composeMessage() {
+    let firstPart = randomComponent(adjective);
+    let secondPart = randomComponent(type);
+    let thirdPart = randomComponent(remark);
+    return `It's a ${firstPart} ${secondPart}. ${thirdPart}`;
+}
