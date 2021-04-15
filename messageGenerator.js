@@ -35,3 +35,5 @@ function composeMessage() {
     let thirdPart = randomComponent(remark);
     return `It's a ${firstPart} ${secondPart}. ${thirdPart}`;
 }
+
+console.log(composeMessage());
