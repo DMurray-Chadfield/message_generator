@@ -22,6 +22,7 @@ const remark = [
     'Too hard for me!',
     'My first of the grade!'
 ];
+const vowels = ['a', 'e', 'i', 'o', 'u']
 
 function randomComponent(array) {
     let len = array.length;
@@ -33,7 +34,11 @@ function composeMessage() {
     let firstPart = randomComponent(adjective);
     let secondPart = randomComponent(type);
     let thirdPart = randomComponent(remark);
-    return `It's a ${firstPart} ${secondPart}. ${thirdPart}`;
+    if (vowels.includes(firstPart[0])) {
+        return `It's an ${firstPart} ${secondPart}. ${thirdPart}`;
+    } else {
+        return `It's a ${firstPart} ${secondPart}. ${thirdPart}`;
+    }
 }
 
 console.log(composeMessage());
